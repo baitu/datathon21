@@ -11,12 +11,12 @@ csvfile.close()
 # iterate over lines in list
 for line in content: # for each line
     split = line.split(",") # split the line into cells
-    string = split[4] + " " + split[6] # write content of cell 4 and 7 to a string
+    string = "\n\t<streetname>" + split[3] + "</streetname>\n\t<qnumber>" + split[5] + "</qnumber>\n" # write content of cell 4 and 6 to a string
     strlist.append(string) # add the string  to a list
 
 # iterate over strings in the list
 for string in strlist: # for each string
-    out += "<a>" + string + "</a>\n" # add string between tags to output string
+    out += "<street>" + string + "</street>\n" # add string between tags to output string
 
 xfile = open("output.xml", "w") # create xml file
 xfile.write(out) # write output string to xml file
