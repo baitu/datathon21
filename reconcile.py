@@ -11,7 +11,7 @@ csvfile.close()
 # iterate over lines in list
 for line in content: # for each line
     split = line.split(",") # split the line into cells
-    string = split[4] + " " + split[7] # write content of cell 4 and 7 to a string
+    string = split[4] + " " + split[6] # write content of cell 4 and 7 to a string
     strlist.append(string) # add the string  to a list
 
 # iterate over strings in the list
